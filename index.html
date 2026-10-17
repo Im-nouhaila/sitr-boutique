@@ -11,48 +11,38 @@
 <body>
 
   <header class="header">
-    <h1 class="logo">Sitr</h1>
-    <nav class="nav">
+    <nav class="nav-left">
       <a href="#accueil">Accueil</a>
-      <a href="#collections">Collections</a>
+      <a href="#collections">Articles</a>
+    </nav>
+    <h1 class="logo">Sitr</h1>
+    <nav class="nav-right">
       <a href="#contact">Contact</a>
+      <a href="#" class="panier">Panier (<span id="compteur">0</span>)</a>
     </nav>
   </header>
 
   <section class="hero" id="accueil">
-    <h2>L'élégance de la pudeur</h2>
-    <p>Abayas, hijabs et caftans pour chaque occasion</p>
-    <a href="#collections" class="btn">Découvrir la collection</a>
-  </section>
-
-  <section class="collections" id="collections">
-    <h2 class="section-title">Nos collections</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="card-img">Abayas</div>
-        <h3>Abayas</h3>
-      </div>
-      <div class="card">
-        <div class="card-img">Hijabs</div>
-        <h3>Hijabs</h3>
-      </div>
-      <div class="card">
-        <div class="card-img">Caftans</div>
-        <h3>Caftans</h3>
-      </div>
+    <div class="hero-contenu">
+      <span class="sur-titre">Nouvelle collection</span>
+      <h2>Le style qui vous ressemble</h2>
+      <p>Abayas, hijabs et caftans, choisis avec soin</p>
+      <a href="#collections" class="btn">Découvrir</a>
     </div>
   </section>
-  <section class="collections" id="collections">
-  <h2 class="section-title">Nos articles</h2>
-  <div class="cards" id="produits"></div>
-</section>
 
-<div class="filtres">
-  <button class="filtre actif" data-cat="Tous">Tous</button>
-  <button class="filtre" data-cat="Abayas">Abayas</button>
-  <button class="filtre" data-cat="Hijabs">Hijabs</button>
-  <button class="filtre" data-cat="Caftans">Caftans</button>
-</div>
+  <section class="collections" id="collections">
+    <h2 class="section-title">Nos articles</h2>
+
+    <div class="filtres">
+      <button class="filtre actif" data-cat="Tous">Tous</button>
+      <button class="filtre" data-cat="Abayas">Abayas</button>
+      <button class="filtre" data-cat="Hijabs">Hijabs</button>
+      <button class="filtre" data-cat="Caftans">Caftans</button>
+    </div>
+
+    <div class="cards" id="produits"></div>
+  </section>
 
   <footer class="footer" id="contact">
     <p>© 2026 Sitr. Tous droits réservés.</p>
