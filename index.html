@@ -13,26 +13,42 @@
   <header class="header">
     <nav class="nav-left">
       <a href="#accueil">Accueil</a>
-      <a href="#collections">Articles</a>
+      <a href="#articles">Articles</a>
+      <a href="#apropos">À propos</a>
     </nav>
     <h1 class="logo">Sitr</h1>
     <nav class="nav-right">
       <a href="#contact">Contact</a>
-      <a href="#" class="panier">Panier (<span id="compteur">0</span>)</a>
+      <button class="panier" id="btn-panier">Panier (<span id="compteur">0</span>)</button>
     </nav>
   </header>
 
   <section class="hero" id="accueil">
+    <div class="hero-collage">
+      <img src="images/abaya1.jpg" alt="">
+      <img src="images/hijab1.jpg" alt="">
+      <img src="images/caftan1.jpg" alt="">
+      <img src="images/caftan2.jpg" alt="">
+    </div>
     <div class="hero-contenu">
       <span class="sur-titre">Nouvelle collection</span>
       <h2>Le style qui vous ressemble</h2>
       <p>Abayas, hijabs et caftans, choisis avec soin</p>
-      <a href="#collections" class="btn">Découvrir</a>
+      <a href="#articles" class="btn">Découvrir</a>
     </div>
   </section>
 
-  <section class="collections" id="collections">
+  <section class="section" id="articles">
     <h2 class="section-title">Nos articles</h2>
+
+    <div class="outils">
+      <input type="text" id="recherche" placeholder="Rechercher un article...">
+      <select id="tri">
+        <option value="defaut">Trier par</option>
+        <option value="asc">Prix : croissant</option>
+        <option value="desc">Prix : décroissant</option>
+      </select>
+    </div>
 
     <div class="filtres">
       <button class="filtre actif" data-cat="Tous">Tous</button>
@@ -44,9 +60,49 @@
     <div class="cards" id="produits"></div>
   </section>
 
+  <section class="section section-claire" id="apropos">
+    <h2 class="section-title">À propos de Sitr</h2>
+    <p class="apropos-texte">
+      Sitr est une boutique dédiée à la mode pudique. Nous sélectionnons avec soin
+      des abayas, des hijabs et des caftans élégants, confortables et de qualité,
+      pour toutes les occasions.
+    </p>
+    <div class="avantages">
+      <div class="avantage"><h3>Livraison</h3><p>Partout au Maroc</p></div>
+      <div class="avantage"><h3>Qualité</h3><p>Tissus soigneusement choisis</p></div>
+      <div class="avantage"><h3>Paiement</h3><p>À la livraison</p></div>
+    </div>
+  </section>
+
   <footer class="footer" id="contact">
-    <p>© 2026 Sitr. Tous droits réservés.</p>
+    <h3 class="footer-logo">Sitr</h3>
+    <p>Contact : <a id="lien-contact" href="#" target="_blank" rel="noopener">WhatsApp</a></p>
+    <p class="copy">© 2026 Sitr. Tous droits réservés.</p>
   </footer>
+
+  <a id="btn-whatsapp" class="btn-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="tiroir" id="tiroir">
+    <div class="tiroir-entete">
+      <h3>Mon panier</h3>
+      <button class="fermer" id="fermer">&times;</button>
+    </div>
+
+    <div class="tiroir-articles" id="panier-articles"></div>
+
+    <div class="tiroir-bas">
+      <p class="total">Total : <span id="total">0</span> DH</p>
+      <form id="form-commande">
+        <input type="text" id="nom" placeholder="Nom complet" required>
+        <input type="tel" id="tel" placeholder="Téléphone" required>
+        <input type="text" id="ville" placeholder="Ville" required>
+        <input type="text" id="adresse" placeholder="Adresse" required>
+        <button type="submit" class="btn-commander">Commander sur WhatsApp</button>
+      </form>
+      <p class="note">Paiement à la livraison</p>
+    </div>
+  </aside>
 
   <script src="js/script.js"></script>
 </body>
