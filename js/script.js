@@ -22,5 +22,19 @@ function afficherArticles(liste) {
     `;
   });
 }
+const boutons = document.querySelectorAll(".filtre");
 
+boutons.forEach(bouton => {
+  bouton.addEventListener("click", () => {
+    boutons.forEach(b => b.classList.remove("actif"));
+    bouton.classList.add("actif");
+
+    const cat = bouton.dataset.cat;
+    if (cat === "Tous") {
+      afficherArticles(articles);
+    } else {
+      afficherArticles(articles.filter(a => a.categorie === cat));
+    }
+  });
+});
 afficherArticles(articles);

@@ -96,5 +96,25 @@ body {
   cursor: pointer;
   transition: opacity 0.3s;
 }
+.filtres {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.filtre {
+  padding: 8px 22px;
+  border: 1px solid var(--lavande);
+  background: white;
+  color: var(--texte);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.filtre:hover, .filtre.actif {
+  background: var(--lavande);
+  color: white;
+}
 .btn-ajouter:hover { opacity: 0.8; }
 .footer { text-align: center; padding: 24px; background: white; font-size: 0.9rem; }
